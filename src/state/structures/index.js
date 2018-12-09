@@ -1,5 +1,7 @@
-import { makeRun } from "./run";
+import { createRun } from "./run";
+import { makeNode} from "./node";
 
 export default {
-	makeRun
+	createRun: createRun,
+	makeNode: makeNode
 }

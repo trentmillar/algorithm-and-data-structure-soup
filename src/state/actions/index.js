@@ -1,4 +1,4 @@
-import Structures, {makeRun} from "../structures/run";
+import Structures, { buildRun} from "../structures/run";
 import { nextId } from "../../utils/array";
 
 export const UPDATE_RUN = "UPDATE_RUN";
@@ -12,8 +12,8 @@ export const createRunAction = (run) => {
 export const createRun = (newProps = {}) => {
 	return (dispatch, getState)	=> {
 		const {runIds} = getState();
-		const createDate = Date.now();
-		const run = {...makeRun(nextId(runIds), createDate.getTime()),...newProps};
+		const created = new Date();
+		const run = {...buildRun(nextId(runIds), created.getTime()),...newProps};
 		dispatch(createRunAction(run));
 	}
 };

@@ -13,9 +13,9 @@ const stoargeConfig = {
 };
 
 // TODO, turf this asap
-const temp_until_reducers_done = (state = {}) => state;
+const temp_until_reducers_done = (state = {}) => {throw  Error('no reducer')};
 
-const persistedReducer = persistReducer(stoargeConfig, temp_until_reducers_done /*reducers*/);
+const persistedReducer = persistReducer(stoargeConfig, /*temp_until_reducers_done */reducers);
 
 /*
 Necessary for Redux Chrome Ext.

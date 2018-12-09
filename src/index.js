@@ -23,13 +23,11 @@ We define the store here so it can become a prop of Provider.
 Using redux-persists, why PersistGate? read quickstart, https://github.com/rt2zz/redux-persist
  */
 ReactDOM.render(
-
-	<Provider store={store}>
+	(<Provider store={store}>
 		<PersistGate loading={null} persistor={persistedStore}>
 			<App />
 		</PersistGate>
-	</Provider>
-
+	</Provider>)
 	, document.getElementById('root')
 );
 
